@@ -1,10 +1,13 @@
-import React from 'react';
-import './App.css';
-import ExpenseChart from './components/ExpenseChart/ExpenseChart'
+import React from "react";
+import "./App.css";
+import ExpenseChart from "./components/ExpenseChart";
 
 function App() {
-return <><ExpenseChart /></>
-    
+  return (
+    <>
+      <ExpenseChart />
+    </>
+  );
 }
 
 export default App;
