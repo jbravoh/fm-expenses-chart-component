@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --paleOrange: hsl(33, 100%, 98%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--cream);
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 340px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+}
+
+.balance-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--softRed);
+  padding: 15px;
+  border-radius: 6px;
+  align-items: center;
+}
+
+#balance-label {
+  color: var(--cream);
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.labels {
+  color: var(--mediumBrown);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+#balance-amount {
+  color: var(--cream);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chart-container {
+  margin-top: 10px;
+  background-color: var(--paleOrange);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#chart-label {
+  font-size: 22px;
+  /* letter-spacing: 1px; */
+}
+
+#month-total-amount {
+  color: var(--darkBrown);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 2px;
+  word-spacing: -5px;
+}
+#percentage-amount {
+  align-self: flex-end;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--darkBrown);
+}
+#percentage-column {
+  margin-bottom: 4.5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+#logo {
+  width: 40px;
+}
+
+.chart {
+  /* height: 100%;
+  width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 12px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: end;
+  margin-top: 30px;
+  padding: 0;
+  list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+.label {
+  text-align: center;
+  color: var(--mediumBrown);
+  font-size: 10px;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bar {
+  z-index: 0;
+  background-color: hsl(186, 34%, 60%);
+  border-radius: 4px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+/* .bar:active {
+  opacity: 0.8;
+} */
+
+.divider {
+  margin: 20px 0;
+  background-color: var(--cream);
+  opacity: 0.8;
+}
+
+li {
+  position: relative;
+}
+
+.hover-item {
+  position: absolute;
+  margin: auto;
+  background-color: var(--darkBrown);
+  padding: 6px 4px;
+  width: 40px;
+  border-radius: 3px;
+  left: -8px;
+  top: -20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hover-item:hover {
+  cursor: pointer;
+}
+
+.hover-item p {
+  color: var(--cream);
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 300px;
+    height: 105%;
+    margin: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #chart-label {
+    font-size: 18px;
+  }
+
+  .hover-item {
+    position: absolute;
+    margin: auto;
+    background-color: var(--darkBrown);
+    padding: 6px;
+    width: 40px;
+    border-radius: 3px;
+    left: -12px;
+    top: -20px;
+    overflow: hidden;
+    /* right: -20%; */
+    text-align: center;
+  }
+
+  .divider {
+    margin: 25px 0;
+    background-color: var(--cream);
+    opacity: 0.8;
   }
 }
