@@ -1,10 +1,6 @@
-// import React, { useState } from "react";
-// import data from "../../fixtures/data.json";
 import logo from "../../images/logo.svg";
 import Balance from "./Balance";
 import Spend from "./Spend";
-
-// import Media from "react-media";
 
 const ExpenseChart = () => {
   return (
