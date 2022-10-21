@@ -2,7 +2,7 @@ import BarChart from "./BarChart";
 
 const Spend = () => {
   return (
-    <div className="chart-container">
+    <div className="spend-container">
       <BarChart />
       <hr className="divider" />
       <div className="flex">

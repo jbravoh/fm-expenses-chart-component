@@ -87,18 +87,17 @@ h2 {
   width: 40px;
 }
 
-/* <==== BAR CHART ====> */
-
-.chart-container {
+.spend-container {
   margin-top: 10px;
   background-color: var(--paleOrange);
   padding: 15px 20px;
   border-radius: 10px;
 }
 
+/* <==== BAR CHART ====> */
+
 #chart-label {
   font-size: 22px;
-  /* letter-spacing: 1px; */
 }
 
 .chart {
